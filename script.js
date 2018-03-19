@@ -32,7 +32,7 @@ function saveHoroskope(){
         }
     })
 }
-//Uppdaterar SESSION med det nya horoskopet och skriver ut 
+//Uppdaterar SESSION med nytt horoskop och skriver ut 
 
 $("#updateHoroskope").click(function(){
 
@@ -54,7 +54,7 @@ $("#updateHoroskope").click(function(){
 });
 });
 //Raderar sparat horoskop
-$("#taBortHoroscope").click(function(){
+$("#removeHoroscope").click(function(){
 
 $.ajax({
     url:"php/deleteHoroscope.php",
