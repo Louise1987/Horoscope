@@ -6,14 +6,14 @@ $(document).ready(function(){
             url:"php/viewHoroscope.php",
             method: "GET",
             succes: function(results){
-                $("content").html(results);
+                $(".content").html(results);
             }
         });
     }
 
     viewHoroscope();
 //Visar sparat horoskop
-    $("#viewHoroscope").click(function(){
+    $("#showHoroscope").click(function(){
         viewHoroscope();
     });
 //Sparar horoskop i SESSION och skriver ut om SESSION är tomt
@@ -40,7 +40,7 @@ $("#updateHoroskope").click(function(){
         url:"php/updateHoroscope.php",
         method: "PUT",
         data:{
-            "personNr": $("#birthDate").val()
+            "personnr": $("#birthDate").val()
         },
         success: function(results){
             if (results == "true"){
@@ -53,14 +53,14 @@ $("#updateHoroskope").click(function(){
 
 });
 });
-
-$("#deleteHoroskope").click(function(){
+//Raderar sparat horoskop
+$("#taBortHoroscope").click(function(){
 
 $.ajax({
     url:"php/deleteHoroscope.php",
     method: "DELETE",
     data:{
-        "personnr": $("#birthDate").val()
+        "personNr": $("#birthDate").val()
     },
     succes: function(results){
         $(".content").html(results);
