@@ -8,104 +8,32 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <title>Horoscope</title>
-<script>
-        function myfunction(){
-            $.ajax({
-                url: "sethoroscope.php",
-                method: "POST",
-                data: {
-                    "personnr": $("#inp").val()
-                },
-                succes: function(results) {
-                    $("#target").append(results)
-                }
-            })
-        }
-        </script>
+
+
+
 </head>
 <body>
        
                 
-                <form action="addHoroscope.php" method="post">
-                    
-                    Personnr: <input type="date" id="id"><br>
-                    <br>
-                    <button onClick="myFunction()">Spara mitt horoskop</button>
-                    <button onClick="myFunction()">Uppdatera mitt horoskop</button>
-                    <button onClick="myFunction()">Radera mitt horoskop</button> <!--Kolla funtion för att dölja denna knapp-->
-                    </form>
                 
+    <div id="dateDiv">
+        Personnr: <input type="date" id="birthDate" /><br>
+        <br>
     
-    <div class="a">
-        <h1>Väduren</h1>
-        <p>Varm, entusiastisk, social, känslosam, stressad, impulsstyrd, aggressiv
-                Element: Eld</p>
+        <button class="knapp" id="saveHoroskope">Spara horoskop
+        <button class="knapp" id="updateHoroskope">Uppdatera horoskop
+        <button class="knapp" id="viewHoroscope">Visa horoskop
+        <button class="knapp" id="deleteHoroskope">Radera horoskop <!---Kolla funtion för att dölja denna knapp -->
+    </div>
+                
+    <div id="target">
+        
+        <div class="content">
+
+        </div>
     </div>
 
-    <div class="b">
-        <h1>Oxen</h1>
-        <p>Envis, beskyddande, lojal, tålmodig, uthållig, stabil, praktisk, realistisk
-            Element: Jord</p>
-    </div>
-
-    <div class="c">
-        <h1>Tvillingarna</h1>
-        <p>Kvick, kommunikativ, ytlig, nyfiken, självständig, modig, impulsiv, stressad
-            Element: Luft</p>
-    </div>
-
-    <div class="d">
-        <h1>Kräftan</h1>
-        <p>Föräldern, beskyddaren, bevararen, den trofaste, den lojale & sympatiske
-            Element: Vatten</p>
-    </div>
-
-    <div class="e">
-        <h1>Lejonet</h1>
-        <p>Storsint, kärleksfull, viljestark, svarsjuk, ledare, trofast, plikttrogen
-            Element: Solen</p>
-    </div>
-
-    <div class="f">
-        <h1>Jungfrun</h1>
-        <p>Blyg, självmedveten, analytisk, produktiv, kritisk, föränderlig 
-            Element: Jord</p>
-    </div>
-
-    <div class="g">
-        <h1>Vågen</h1>
-        <p>Förälskelse, charm, obeslutsamhet, förföriskhet, diplomati, social kompetens
-            Element: Luft</p>
-    </div>
-
-    <div class="h">
-        <h1>Skorpionen</h1>
-        <p>Intensiv, svarsjuk, passionerad, tystlåten, intensiv, lojal, modig, stark
-            Element: Vatten</p>
-    </div>
-
-    <div class="i">
-        <h1>Skytten</h1>
-        <p>Ärlig, generös, idealistisk, optimistisk, överdrivande, entusiastisk, sökare
-            Element: Eld</p>
-    </div>
-
-    <div class="j">
-        <h1>Stenbocken</h1>
-        <p>Tillbakadragen, blyg, trogen, pliktkänsla, ambitiös, lojal 
-            Element: Jord</p>
-    </div>
-
-    <div class="k">
-        <h1>Vattumannen</h1>
-        <p>Fredsälskare, klarsynt, intuitiv, lojal, uppfinningsrik, revolutionär
-            Element: Vatten</p>
-    </div>
-
-    <div class="l">
-        <h1>Fiskarna</h1>
-        <p>Empati, human, slarvig, vänlig, hemlighetsfull, lättpåverkad, inspirerande
-        Element: Vatten</p>
-    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
