@@ -60,7 +60,7 @@ $.ajax({
     url:"php/deleteHoroscope.php",
     method: "DELETE",
     data:{
-        "personNr": $("#birthDate").val()
+        "personnr": $("#birthDate").val()
     },
     succes: function(results){
         $(".content").html(results);
