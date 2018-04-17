@@ -1,17 +1,9 @@
 <?php
 
-session_start();
+if(isset($_GET['birthNumber'])){
 
-if($_SERVER["REQUEST_METHOD"] == "GET"){
-    if($_SESSION == null){
-        echo "<p>Inget Horoskop har sparats, skriv in nytt</p>";
-    }
-    else{
-        echo ($_SESSION["horoskope"]);
-    }
+print_r($_GET);
+if (isset($_GET["sign"])) echo "sign is set\n";
+if($_GET["sign"] ==="") "sign is empty\n";
 }
-else{
-    echo "<p>Not requested by GET</p>";
-}
-
 ?>

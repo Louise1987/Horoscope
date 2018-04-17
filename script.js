@@ -1,69 +1,23 @@
 $(document).ready(function(){
 
-    //Skriver ut horoskop
-    viewHoroscope = function(){
-        $.ajax({
-            url:"php/viewHoroscope.php",
-            method: "GET",
-            succes: function(results){
-                $(".content").html(results);
-            }
-        });
-    }
+    // document.getElementById("birthNumber").value;
+    // document.getElementById("visa").innerHTML
 
-    viewHoroscope();
-//Visar sparat horoskop
-    $("#showHoroscope").click(function(){
-        viewHoroscope();
-    });
-//Sparar horoskop i SESSION och skriver ut om SESSION är tomt
-function saveHoroskope(){
+    //Hämtar värde i input till addHoroskop
+  function addHoroscope() {
+     document.getElementById("birthNumber").value();
     $.ajax({
-        url: "addHoroscope.php",
-        method: "POST",
-        data: {
-            "personnr": $("#birthDate").val()
-        },
-        succes: function(results) {
-            if(results == "true"){
-                viewHoroscope();
-            }
-            $(".content").html(results)
-        }
-    })
+    type: "POST",
+    url: "addHoroscope.php",
+    data: {"födelsedatum": $("#birthNumber").val()},
+    success: $("#tecken").html(visa),
+    dataType: html
+    
+     });
 }
-//Uppdaterar SESSION med nytt horoskop och skriver ut 
-
-$("#updateHoroskope").click(function(){
-
-    $.ajax({
-        url:"php/updateHoroscope.php",
-        method: "PUT",
-        data:{
-            "personnr": $("#birthDate").val()
-        },
-        success: function(results){
-            if (results == "true"){
-                viewHoroscope();
-            }else {
-                $("content").html(results);
-            }
-        }
 });
 
-});
-});
-//Raderar sparat horoskop
-$("#removeHoroscope").click(function(){
 
-$.ajax({
-    url:"php/deleteHoroscope.php",
-    method: "DELETE",
-    data:{
-        "personnr": $("#birthDate").val()
-    },
-    succes: function(results){
-        $(".content").html(results);
-    }
-});
-});
+
+
+
