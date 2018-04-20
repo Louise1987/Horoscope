@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    
     <title>Horoscope</title>
 </head>
 <body>
 <div id="meny">
-<form id="input-form" method="GET" action="addHoroscope.php">
+<form id="input-form" method="POST" action="addHoroscope.php">
 <input type="text" name="birthNumber" maxlength="8" placeholder="Födelsedatum">
-<input type="button" oncklick="addHoroscope()" value="Lägg till Horoskop">
-<button id="saveHoroscope()">Spara Horoskop</button>
-<button id="updateHoroscope()">Uppdatera Horoskop</button>
-<button id="deleteHoroscope()">Radera Horoskop</button>
+<button oncklick="addHoroscope()">Lägg till Horoskop"</button>
+<button oncklick="saveHoroscope()">Spara Horoskop</button>
+<button oncklick="updateHoroscope()">Uppdatera Horoskop</button>
+<button oncklick="deleteHoroscope()">Radera Horoskop</button>
 </form>
 </div>
 
@@ -24,6 +24,6 @@
 
 
 
-    <script src="script.js"></script>
+    <!--<script src="script.js"></script>-->
 </body>
 </html>

@@ -1,11 +1,9 @@
 $(document).ready(function(){
 
-    // document.getElementById("birthNumber").value;
-    // document.getElementById("visa").innerHTML
-
     //Hämtar värde i input till addHoroskop
-  function addHoroscope() {
-     document.getElementById("birthNumber").value();
+   
+     document.getElementById("birthNumber").val();
+  
     $.ajax({
     type: "POST",
     url: "addHoroscope.php",
@@ -13,9 +11,10 @@ $(document).ready(function(){
     success: $("#tecken").html(visa),
     dataType: html
     
-     });
-}
-});
+      });
+    });
+
+
 
 
 
