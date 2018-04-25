@@ -1,10 +1,10 @@
 <?php
 
-
 function getSign($datum){
 
     $datum = $_POST["birthNumber"];
-    echo "<p>hej</p>";
+
+   
     
         if($datum[2] . $datum[3] . $datum[4] . $datum[5] >= '1222' || $datum[2] . $datum[3] . $datum[4] . $datum[5]  <= '1230' || $datum[2] . $datum[3] . $datum[4] . $datum[5]  >= '0101' || $datum[2] . $datum[3] . $datum[4] . $datum[5]  <= '0119'){
             $horoscope = "<h3>22 december - 19 januari: Stenbocken</h3><img src='img/capricorn.png'>";
@@ -45,7 +45,7 @@ function getSign($datum){
             $horoscope = "<h3>22 november - 21 december: Skytten</h3><img src='img/sagittarius.png'>";
         }
         
-       return $horoscope;
+        return $horoscope;
         
     }
 

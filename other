@@ -1,0 +1,5 @@
+/*J- fick det inte att fungera med konstruktorn/klassen. Nu har du en vanlig funktion som returnerar
+$horoscope längst ner i slutet av funktionen, alltså texten och bilden. Den översta med Stenbock
+fungerar, bara att fixa till de andra. 
+ex på ett $datum är 940101, alltså en array som börjar på 0. 
+0101 i ifsatsen nedan. Går även att använda substring tror jag. */
