@@ -1,8 +1,6 @@
 $(document).ready(function(){
 
     //Hämtar värde i input till addHoroskop
-   
-     
   function addHoroscope(){
     document.getElementById("birthNumber").val();
     $.ajax({
@@ -14,6 +12,19 @@ $(document).ready(function(){
     
       });
     }
+
+    //Skickar värde till viewHoroscope
+    function saveHoroscope(){
+      $.ajax({
+        type: "GET",
+        url: "viewHoroscope.php",
+        data: {"födelsedatum": $("#birthNumber").val()},
+        succes: $("#tecken").html(visa),
+        dataType: html
+
+      })
+    }
+
   });
 
 
