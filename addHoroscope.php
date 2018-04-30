@@ -3,18 +3,18 @@ session_start();
 include 'calculateHoroscope.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    $datum = $_POST['birthNumber'];
+    $datum = $_POST["birthNumber"];
 
 
 
 //Om värde sparat i POST stämmer mot calculateHoroscope.php
-if (isset($_POST["födelsedatum"])) {
-   $_SESSION['horoscope'] = getSign($datum);
+if (isset($_POST["birthNumber"])) {
+   $_SESSION["birthNumber"] = getSign($datum);
    print_r($horoscope);
 
 //Om input lämnas tomt
 if
-(empty($_POST['birthNumber'])) {
+(empty($_POST["birthNumber"])) {
 echo "<p>Du måste skriva ett datum</p>";
    
    

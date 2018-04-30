@@ -6,7 +6,7 @@ $(document).ready(function(){
     $.ajax({
     type: "POST",
     url: "addHoroscope.php",
-    data: {"födelsedatum": $("#birthNumber").val()},
+    data: {"birthNumber": $("#birthNumber").val()},
     success: $("#tecken").html(visa),
     dataType: html
     
@@ -15,10 +15,11 @@ $(document).ready(function(){
 
     //Skickar värde till viewHoroscope
     function saveHoroscope(){
+      document.getElementById("birthNumber").val();
       $.ajax({
         type: "GET",
         url: "viewHoroscope.php",
-        data: {"födelsedatum": $("#birthNumber").val()},
+        data: {"birthNumber": $("#birthNumber").val()},
         succes: $("#tecken").html(visa),
         dataType: html
 
