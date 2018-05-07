@@ -1,4 +1,4 @@
-$(document).ready(function(){
+//$(document).ready(function(){
 
     //Hämtar värde i input till addHoroskop
   // function addHoroscope(){
@@ -14,7 +14,7 @@ $(document).ready(function(){
   //   }
     
     function addHoroscope(){
-      $ajax({
+      $.ajax({
         url: "test.php",
         type:"POST",
         success:function(result) { 
@@ -37,7 +37,7 @@ $(document).ready(function(){
     //   })
     // }
 
-  });
+ //});
 
 
 
