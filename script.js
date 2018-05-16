@@ -15,14 +15,56 @@
     
     function addHoroscope(){
       $.ajax({
-        url: "test.php",
+        url: "addHoroscope.php",
         type:"POST",
         success:function(result) { 
+          if(result == true){
+          }else{
+            (result == false)
+          }
         alert(result);
           
         }
-      });
+      })
     }
+
+    function clearHoroscope(){
+      $.ajax({
+        url: "clearHoroscope.php",
+        type:"POST",
+        succes:function(result) {
+          if(result == true){
+          }else{
+            (result == false)
+        }
+        alert (result);
+      }
+      })
+    }
+
+    function updateHoroscope(){
+      $.ajax({
+        url: "updateHoroscope.php", 
+        type:"POST",
+        succes: function(result) {
+          if(result == true){
+          }else{
+            (result == false)
+          }
+          alert (result);
+          }
+      })
+    }
+
+    // function newHoroscope(){
+    //   $.ajax({
+    //     url:"addHoroscope.php",
+    //     type:"POST", 
+    //     succes:function(result) {
+    //       alert(result);
+    //     }
+    //   })
+    // }
 
     //Skickar värde till viewHoroscope
     // function saveHoroscope(){
