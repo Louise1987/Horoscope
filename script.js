@@ -28,6 +28,20 @@
       })
     }
 
+    function updateHoroscope(){
+      $.ajax({
+        url: "updateHoroscope.php", 
+        type:"POST",
+        succes: function(result) {
+          if(result == true){
+          }else{
+            (result == false)
+          }
+          alert (result);
+          }
+      })
+    }
+
     function clearHoroscope(){
       $.ajax({
         url: "clearHoroscope.php",
@@ -42,19 +56,7 @@
       })
     }
 
-    function updateHoroscope(){
-      $.ajax({
-        url: "updateHoroscope.php", 
-        type:"POST",
-        succes: function(result) {
-          if(result == true){
-          }else{
-            (result == false)
-          }
-          alert (result);
-          }
-      })
-    }
+  
 
     // function newHoroscope(){
     //   $.ajax({

@@ -1,3 +1,1 @@
-<?php 
-echo "Lyckades";
-?>
+<?php echo "Lyckades";?>
