@@ -1,1 +1,7 @@
-<?php echo "Lyckades";?>
+<?php 
+session_start();
+
+
+echo "Bort taget";
+
+?>
