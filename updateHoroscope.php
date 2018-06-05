@@ -1,6 +1,9 @@
 <?php 
 session_start();
 
-echo "Uppdaterad";
+echo true;
+
+
+
 
 ?>

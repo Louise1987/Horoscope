@@ -18,40 +18,49 @@
         url: "addHoroscope.php",
         type:"POST",
         success:function(result) { 
-          if(result == true){
+          if(result == "true"){
+            alert("lyckades");
           }else{
-            (result == false)
+            alert("misslyckades");
+          
           }
-        alert(result);
+        
           
         }
       })
     }
 
     function updateHoroscope(){
+      
       $.ajax({
         url: "updateHoroscope.php", 
         type:"POST",
-        succes: function(result) {
-          if(result == true){
+        succes: function(update) {
+          alert("hej");
+          if(update == "true"){
+            alert("lyckades");
           }else{
-            (result == false)
+            alert("misslyckades");         
           }
-          alert (result);
+          
           }
+          
       })
+      alert ("error");
+      
     }
 
     function clearHoroscope(){
       $.ajax({
         url: "clearHoroscope.php",
         type:"POST",
-        succes:function(result) {
-          if(result == true){
+        succes:function(clear) {
+          if(clear == "true"){
+            alert("lyckades");
           }else{
-            (result == false)
+            alert("lyckades");
         }
-        alert (result);
+        
       }
       })
     }

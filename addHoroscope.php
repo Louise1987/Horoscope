@@ -6,8 +6,9 @@ session_start();
 //     $datum = $_POST["birthNumber"];
 
 
+echo "true";
 
-echo "Lyckades";
+
 
 //Om värde sparat i POST stämmer mot calculateHoroscope.php
 // if (isset($_POST["birthNumber"])) {
