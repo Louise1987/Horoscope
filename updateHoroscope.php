@@ -1,7 +1,8 @@
 <?php 
 session_start();
 
-echo true;
+$_SESSION["birthNumber"] = getSign($datum);
+echo "true";
 
 
 

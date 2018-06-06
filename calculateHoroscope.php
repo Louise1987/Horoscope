@@ -2,7 +2,7 @@
 
 function getSign($datum){
 
-    $datum = $_POST["birthNumber"];
+   
    
     $horoscope = $datum[2] . $datum[3] . $datum[4] . $datum[5];
 

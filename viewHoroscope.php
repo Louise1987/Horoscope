@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET['birthNumber'])){
+if(isset($_SESSION['birthNumber'])){
 
-print_r($_GET);
-if (isset($_GET["sign"])) echo "sign is set\n";
-if($_GET["sign"] ==="") "sign is empty\n";
-}
+print_r($_SESSION);
+// if (isset($_GET["sign"])) echo "sign is set\n";
+// if($_GET["sign"] ==="") "sign is empty\n";
+ }
 ?>

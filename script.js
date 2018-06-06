@@ -31,12 +31,10 @@
     }
 
     function updateHoroscope(){
-      
       $.ajax({
         url: "updateHoroscope.php", 
         type:"POST",
-        succes: function(update) {
-          alert("hej");
+        success: function(update) {
           if(update == "true"){
             alert("lyckades");
           }else{
@@ -46,7 +44,7 @@
           }
           
       })
-      alert ("error");
+     
       
     }
 
@@ -54,7 +52,7 @@
       $.ajax({
         url: "clearHoroscope.php",
         type:"POST",
-        succes:function(clear) {
+        success:function(clear) {
           if(clear == "true"){
             alert("lyckades");
           }else{

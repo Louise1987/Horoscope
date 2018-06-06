@@ -1,19 +1,19 @@
 <?php
 session_start();
-//include 'calculateHoroscope.php';
+include 'calculateHoroscope.php';
 
 // if($_SERVER["REQUEST_METHOD"] == "POST"){
 //     $datum = $_POST["birthNumber"];
 
-
+$datum = "05-07";
 echo "true";
 
 
 
 //Om värde sparat i POST stämmer mot calculateHoroscope.php
 // if (isset($_POST["birthNumber"])) {
-//    $_SESSION["birthNumber"] = getSign($datum);
-//    print_r($horoscope);
+   $_SESSION["birthNumber"] = getSign($datum);
+   //print_r($horoscope);
 
 // //Om input lämnas tomt
 // if
