@@ -5,26 +5,34 @@ include 'calculateHoroscope.php';
 // if($_SERVER["REQUEST_METHOD"] == "POST"){
 //     $datum = $_POST["birthNumber"];
 
-$datum = "0507";
-echo "true";
+$_SESSION['birthNumber'];
+    echo "true";
 
 
 
-//Om värde sparat i POST stämmer mot calculateHoroscope.php
- if (isset($_POST["birthNumber"])) {
-   $_SESSION["birthNumber"] = getSign($datum);
-   print_r($horoscope);
 
-// //Om input lämnas tomt
-if
-(empty($_POST["birthNumber"])) {
-echo "skriv in datum";
+//Om värde sparat i POST stämmer mot värde i calculateHoroscope.php
+
+
+ 
+
+//Om ett horoscope redan finns sparat ska det inte skrivas över
+// if (isset($_SESSION["birthNumber"] )){
+// $_SESSION["birthNumber"] = $_POST["birthNumber"];
+// }
+   
+
+    
+
+
+// (empty($_POST["birthNumber"])) {
+// echo "skriv in datum";
    
    
 // //Datum matchar inte
 // }else{
 // echo "misslyckades"; 
 //  }
- }
- }
+ //}
+ 
 ?>

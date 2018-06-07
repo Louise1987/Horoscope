@@ -1,7 +1,9 @@
 <?php 
-session_start();
+include 'calculateHoroscope.php';
 
-$_SESSION["birthNumber"] = getSign($datum);
+session_start();
+//$datum sätter stjärntecknet
+$_SESSION["birthNumber"];
 echo "true";
 
 

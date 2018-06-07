@@ -1,8 +1,6 @@
 <?php
 
 function getSign($datum){
-
-   
    
     $horoscope = $datum[2] . $datum[3] . $datum[4] . $datum[5];
 

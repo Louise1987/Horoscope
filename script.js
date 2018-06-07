@@ -18,6 +18,7 @@
         url: "addHoroscope.php",
         type:"POST",
         success:function(result) { 
+          jQuery("#mySign").html(result);
           if(result == "true"){
             alert("lyckades");
           }else{
@@ -60,6 +61,20 @@
         }
         
       }
+      })
+    }
+
+    function viewHoroscope(){
+      $.ajax({
+        url: "viewHoroscope.php",
+        type:"POST",
+        success:function(view){
+          if(view == "true"){
+            alert("lyckades");  
+          }else{
+            alert("misslyckades");
+          }
+        }
       })
     }
 
