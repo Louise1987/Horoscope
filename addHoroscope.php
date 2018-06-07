@@ -11,20 +11,20 @@ echo "true";
 
 
 //Om värde sparat i POST stämmer mot calculateHoroscope.php
-// if (isset($_POST["birthNumber"])) {
+ if (isset($_POST["birthNumber"])) {
    $_SESSION["birthNumber"] = getSign($datum);
-   //print_r($horoscope);
+   print_r($horoscope);
 
 // //Om input lämnas tomt
-// if
-// (empty($_POST["birthNumber"])) {
-// echo "lyckades";
+if
+(empty($_POST["birthNumber"])) {
+echo "skriv in datum";
    
    
 // //Datum matchar inte
 // }else{
 // echo "misslyckades"; 
 //  }
-// }
-// }
+ }
+ }
 ?>
