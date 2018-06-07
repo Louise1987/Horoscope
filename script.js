@@ -56,7 +56,7 @@
           if(clear == "true"){
             alert("lyckades");
           }else{
-            alert("lyckades");
+            alert("misslyckades");
         }
         
       }

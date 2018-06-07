@@ -5,7 +5,7 @@ include 'calculateHoroscope.php';
 // if($_SERVER["REQUEST_METHOD"] == "POST"){
 //     $datum = $_POST["birthNumber"];
 
-$datum = "05-07";
+$datum = "0507";
 echo "true";
 
 
