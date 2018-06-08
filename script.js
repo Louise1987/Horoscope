@@ -17,6 +17,7 @@
       $.ajax({
         url: "addHoroscope.php",
         type:"POST",
+        data: { datum: $('#input-id'.val())},
         success:function(result) { 
           jQuery("#mySign").html(result);
           if(result == "true"){
