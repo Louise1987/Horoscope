@@ -4,7 +4,7 @@ include 'calculateHoroscope.php';
 
 //funktion för att få värdet i $_SESSION i variabler $datum och $horoscope
 
-$datum = "0507";
+$datum = "870507";
 echo "true";
 
 $_SESSION['birthNumber']=getSign($datum);
