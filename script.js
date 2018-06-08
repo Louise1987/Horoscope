@@ -19,7 +19,7 @@
         type:"POST",
         data: { datum: $('#input-id'.val())},
         success:function(result) { 
-          jQuery("#mySign").html(result);
+          $("#mySign").html(data);
           if(result == "true"){
             alert("lyckades");
           }else{
