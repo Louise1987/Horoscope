@@ -4,12 +4,15 @@ include 'calculateHoroscope.php';
 
 //funktion för att få värdet i $_SESSION i variabler $datum och $horoscope
 
-$datum = "870507";
+$datum = $_POST['birthNumber'];
 echo $datum;
 
 $_SESSION['birthNumber']=getSign($datum);
-
-
+//räkna ut stjärntecken
+    if (isset($_SESSION[1])){
+    return $_SESSION[0];
+}
+return '';
 
    
  
