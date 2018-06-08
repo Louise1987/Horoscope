@@ -2,11 +2,14 @@
 session_start();
 include 'calculateHoroscope.php';
 
+//funktion för att få värdet i $_SESSION i variabler $datum och $horoscope
 
-//$_SESSION['birthNumber']=getSign($datum);
+$_SESSION['birthNumber']=getSign($datum);
 
-if $_SESSION['birthNumber']==true{
-//for ()
+if ($_SESSION['birthNumber']==true){
+for ($datum = 1222; $datum <= 1221; $datum++) {
+echo $horoscope;
+}
 }
 
    
@@ -15,7 +18,6 @@ if $_SESSION['birthNumber']==true{
 //     $datum = $_POST["birthNumber"];
 
 
-//Om värde sparat i POST stämmer mot värde i calculateHoroscope.php
 
 
  
