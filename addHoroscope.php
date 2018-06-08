@@ -2,13 +2,17 @@
 session_start();
 include 'calculateHoroscope.php';
 
+
+//$_SESSION['birthNumber']=getSign($datum);
+
+if $_SESSION['birthNumber']==true{
+//for ()
+}
+
+   
+ 
 // if($_SERVER["REQUEST_METHOD"] == "POST"){
 //     $datum = $_POST["birthNumber"];
-
-$_SESSION['birthNumber'];
-    echo "true";
-
-
 
 
 //Om värde sparat i POST stämmer mot värde i calculateHoroscope.php

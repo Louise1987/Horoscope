@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 if(isset($_SESSION['birthNumber'])){
 
 print_r('birthNumber');
