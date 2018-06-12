@@ -2,22 +2,23 @@
 session_start();
 include 'calculateHoroscope.php';
 
-//funktion för att få värdet i $_SESSION i variabler $datum och $horoscope
+//funktion för att få värdet i $_SESSION
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $datum = $_POST["birthNumber"];
 
 $datum = $_POST['birthNumber'];
 echo $datum;
 
 $_SESSION['birthNumber']=getSign($datum);
 //räkna ut stjärntecken
-    if (isset($_SESSION[1])){
-    return $_SESSION[0];
-}
-return '';
+//     if (isset($_SESSION[1])){
+//     return $_SESSION[0];
+// }
+// return '';
 
    
- 
-// if($_SERVER["REQUEST_METHOD"] == "POST"){
-//     $datum = $_POST["birthNumber"];
+}
+
 
 
 

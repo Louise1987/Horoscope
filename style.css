@@ -10,6 +10,8 @@ form{
 }
 
 #mySign{
-    color: white;
+    color: black;
     font-size: 40px;
+    background-color: white;
 }
+

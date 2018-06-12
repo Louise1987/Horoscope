@@ -12,6 +12,7 @@
     
   //     });
   //   }
+  viewHoroscope();
     
     function addHoroscope(){
       $.ajax({
@@ -19,7 +20,6 @@
         type:"POST",
         data: { datum: $('#input-id'.val())},
         success:function(result) { 
-          $("#mySign").html(data);
           if(result == "true"){
             alert("lyckades");
           }else{
@@ -68,13 +68,14 @@
     function viewHoroscope(){
       $.ajax({
         url: "viewHoroscope.php",
-        type:"POST",
+        type:"GET",
         success:function(view){
-          if(view == "true"){
-            alert("lyckades");  
-          }else{
-            alert("misslyckades");
-          }
+          $("#mySign").html(view);
+          // if(view == "true"){
+          //   alert("lyckades");  
+          // }else{
+          //   alert("misslyckades");
+          // }
         }
       })
     }
