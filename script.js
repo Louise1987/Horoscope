@@ -18,7 +18,9 @@
       $.ajax({
         url: "addHoroscope.php",
         type:"POST",
-        data: { datum: $('#input-id'.val())},
+        data: { 
+          datum: $('#input-id').val()
+        },
         success:function(result) { 
           if(result == "true"){
             alert("lyckades");
