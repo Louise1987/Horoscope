@@ -21,7 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "PUT"){
 
         echo "false";
     }    
-} else {
+    else {
     echo "false";
 }
 
