@@ -4,7 +4,7 @@ session_start();
 //funktion för att få värdet i $_SESSION
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     
-    if ($_POST["datum"] !== "" Or $_SESSION['datum'] == ""){
+    if ($_POST["datum"] != "" Or $_SESSION['datum'] == ""){
         
         $datum = $_POST["datum"];
         //$_SESSION['datum']=getSign($datum);

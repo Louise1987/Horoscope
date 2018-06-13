@@ -7,16 +7,20 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "PUT"){
 
-    if ($_POST["datum"] !== "" Or ($_SESSION['datum'] == "")){
+    if (isset($_POST["datum"]) && $_SESSION['datum'] == 1){
 
-        $datum = $_POST["datum"];
+         $datum = $_POST["datum"];
+        // $_SESSION['datum']=$datum;
         $_SESSION['datum']=$datum;
-        echo "true";   
-    } else {
+        echo "true"; 
+
+    } else if
+         (!isset($_POST["datum"]) && $_SESSION["datum"] == 0){
+
         echo "false";
     }    
-    } else {
-        echo "false";
+} else {
+    echo "false";
 }
 
 
