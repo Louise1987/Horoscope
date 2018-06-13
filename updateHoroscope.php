@@ -8,16 +8,16 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "PUT"){
 
     //om SESSION är sparad
-    if (isset($_POST["datum"]) && $_SESSION['datum'] == 1){
+    if (isset($_POST["datum"]) Or $_SESSION['datum'] == 1){
 
-         $datum = $_POST["datum"];
+         //$datum = $_POST["datum"];
         // $_SESSION['datum']=$datum;
-        $_SESSION['datum']=$datum;
+        //$_SESSION['datum']=$datum;
         echo "true"; 
 
     //om SESSION inte är sparad
     } else if
-         (isset($_POST["datum"]) && $_SESSION["datum"] == 0){
+         (!isset($_POST["datum"]) && $_SESSION["datum"] == 0){
 
         echo "false";
     }    
