@@ -2,11 +2,11 @@
 
 function getSign($datum){
    
-    $horoscope = $datum[2] . $datum[3] . $datum[4] . $datum[5];
+    $sign = $datum[2] . $datum[3] . $datum[4] . $datum[5];
 
    
     if($datum >= '1222' || $datum  <= '1230' || $datum  >= '0101' || $datum  <= '0119'){
-        $horoscope = "<h3>22 december - 19 januari: Stenbocken</h3><img src='img/capricorn.png'>";      
+        $sign = "<h3>22 december - 19 januari: Stenbocken</h3><img src='img/capricorn.png'>";      
     }
     elseif($horoscope >= '0120' || $horoscope <= '0131' || $horoscope >= '0201' || $horoscope <= '0218'){
         $sign = "<h3>20 januari - 18 februari: Vattumannen</h3><img src='img/aquarius.png'>";
