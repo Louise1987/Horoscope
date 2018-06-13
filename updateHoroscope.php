@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "PUT"){
         // $_SESSION['datum']=$datum;
         $_SESSION['datum']=$datum;
         echo "true"; 
-        
+
     //om SESSION inte är sparad
     } else if
          (isset($_POST["datum"]) && $_SESSION["datum"] == 0){
