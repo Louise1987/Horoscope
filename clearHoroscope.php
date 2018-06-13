@@ -1,7 +1,10 @@
 <?php 
 session_start();
 
-$_SESSION["birthNumber"] == null;
+if($_SERVER["REQUEST_METHOD"] == "DELETE"){
+
+unset($_SESSION['datum']);
 echo "true";
 
+}
 ?>

@@ -1,17 +1,4 @@
-//$(document).ready(function(){
 
-    //Hämtar värde i input till addHoroskop
-  // function addHoroscope(){
-  //   document.getElementById("birthNumber").val();
-  //   $.ajax({
-  //   type: "POST",
-  //   url: "addHoroscope.php",
-  //   data: {"birthNumber": $("#birthNumber").val()},
-  //   success: $("#tecken").html(visa),
-  //   dataType: html
-    
-  //     });
-  //   }
   viewHoroscope();
     
     function addHoroscope(){
@@ -23,13 +10,12 @@
         },
         success:function(result) { 
           if(result == "true"){
-            alert("lyckades");
+            viewHoroscope();
+            console.log("lyckades att spara datum");
           }else{
-            alert("misslyckades");
+            console.log("misslyckades med att sätta datum");
           
-          }
-        
-          
+          }          
         }
       })
     }
@@ -37,12 +23,16 @@
     function updateHoroscope(){
       $.ajax({
         url: "updateHoroscope.php", 
-        type:"POST",
+        type:"PUT",
+        data:{
+          datum: $('#input-id').val()
+        },
         success: function(update) {
           if(update == "true"){
-            alert("lyckades");
+            viewHoroscope();
+            console.log("lyckades uppdatera datum");
           }else{
-            alert("misslyckades");         
+            console.log("misslyckades uppdatera datum");         
           }
           
           }
@@ -55,12 +45,13 @@
     function clearHoroscope(){
       $.ajax({
         url: "clearHoroscope.php",
-        type:"POST",
+        type:"DELETE",
         success:function(clear) {
           if(clear == "true"){
-            alert("lyckades");
+            viewHoroscope();
+            console.log("lyckades att radera");
           }else{
-            alert("misslyckades");
+            console.log("misslyckades att radera");
         }
         
       }
@@ -84,30 +75,7 @@
 
   
 
-    // function newHoroscope(){
-    //   $.ajax({
-    //     url:"addHoroscope.php",
-    //     type:"POST", 
-    //     succes:function(result) {
-    //       alert(result);
-    //     }
-    //   })
-    // }
 
-    //Skickar värde till viewHoroscope
-    // function saveHoroscope(){
-    //   document.getElementById("birthNumber").val();
-    //   $.ajax({
-    //     type: "GET",
-    //     url: "viewHoroscope.php",
-    //     data: {"birthNumber": $("#birthNumber").val()},
-    //     succes: $("#tecken").html(visa),
-    //     dataType: html
-
-    //   })
-    // }
-
- //});
 
 
 
