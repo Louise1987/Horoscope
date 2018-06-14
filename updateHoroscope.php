@@ -6,25 +6,26 @@ session_start();
 //kolla om session finns ska den uppdatera annars ska den inte uppdatera.
 
 if($_SERVER["REQUEST_METHOD"] == "PUT"){
+//echo("{$_SESSION['test']}");
 
     //om SESSION är sparad
-    if (isset($_POST["datum"]) Or $_SESSION['datum'] == 1){
+    if (isset($_POST["datum"]) Or ($_SESSION['datum']) == ""){
 
-         //$datum = $_POST["datum"];
-        // $_SESSION['datum']=$datum;
-        //$_SESSION['datum']=$datum;
+         $datum = $_POST["datum"];
+        $_SESSION['datum']=$datum;
+        
         echo "true"; 
 
     //om SESSION inte är sparad
     } else if
-         (!isset($_POST["datum"]) && $_SESSION["datum"] == 0){
+         (!isset($_POST["datum"]) && ($_SESSION["datum"]) != ""){
 
         echo "false";
     }    
     else {
     echo "false";
 }
-
+}
 
 
 
