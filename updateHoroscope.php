@@ -1,24 +1,26 @@
 <?php 
+session_start();
 include 'calculateHoroscope.php';
 
-session_start();
+
 //$datum sätter stjärntecknet
 //kolla om session finns ska den uppdatera annars ska den inte uppdatera.
 
 if($_SERVER["REQUEST_METHOD"] == "PUT"){
 //echo("{$_SESSION['test']}");
 
+    die(var_dump($_POST['datum']));
     //om SESSION är sparad
-    if (isset($_POST["datum"]) Or ($_SESSION['datum']) == ""){
+    if (isset($_SESSION["datum"]) && (!empty($_POST['datum']))){
 
-         $datum = $_POST["datum"];
-        $_SESSION['datum']=$datum;
+    $_SESSION['datum'] = $_POST["datum"];
         
         echo "true"; 
 
     //om SESSION inte är sparad
     } else if
-         (!isset($_POST["datum"]) && ($_SESSION["datum"]) != ""){
+         (!isset($_POST["datum"])){ 
+         //|| ($_SESSION["datum"]) != ""){
 
         echo "false";
     }    
@@ -26,7 +28,5 @@ if($_SERVER["REQUEST_METHOD"] == "PUT"){
     echo "false";
 }
 }
-
-
 
 ?>

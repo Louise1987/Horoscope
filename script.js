@@ -27,11 +27,13 @@
         data:{
           datum: $('#input-id').val()
         },
-        success: function(update) {
-          if(update == "true"){
+        success: function(result) {
+          console.log(result);
+          if(result == "true"){
             viewHoroscope();
             console.log("lyckades uppdatera datum");
           }else{
+            //viewHoroscope();
             console.log("misslyckades uppdatera datum");         
           }
           
