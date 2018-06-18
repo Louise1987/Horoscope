@@ -23,13 +23,13 @@
     function updateHoroscope(){
       $.ajax({
         url: "updateHoroscope.php", 
-        type:"PUT",
+        type:"POST",
         data:{
           datum: $('#input-id').val()
         },
-        success: function(result) {
-          console.log(result);
-          if(result == "true"){
+        success: function(update) {
+          console.log(update);
+          if(update == "true"){
             viewHoroscope();
             console.log("lyckades uppdatera datum");
           }else{
