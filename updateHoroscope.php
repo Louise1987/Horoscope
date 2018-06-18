@@ -11,11 +11,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     die(var_dump($_SESSION['datum']));
     //om SESSION är sparad
-    if (isset($_POST["datum"]) && (!empty($_SESSION['datum']))){
+    if (isset($_POST["datum"]) Or (!empty($_SESSION['datum']))){
 
     $_POST['datum'] = $datum;
-    //$datum = $_POST["datum"];
-    //$_SESSION['datum']=$datum;
+    // $datum = $_POST["datum"];
+    // $_SESSION['datum']=$datum;
         
         echo "true"; 
 
