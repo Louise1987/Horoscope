@@ -7,10 +7,10 @@ if($_SERVER["REQUEST_METHOD"] == "GET"){
 
     
     print_r($_SESSION['birthNumber']);
-    // echo "ditt datum";
+  
 
     }else{
-    // unset($_SESSION['datum']);
+    
     echo "inget datum";
     }
 }

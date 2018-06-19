@@ -3,7 +3,7 @@
 function getSign($horoskop){
    
     $datum = substr($horoskop, -4, 4);
-    // $sign = $datum[2] . $datum[3] . $datum[4] . $datum[5];
+    
    
     if($datum >= '1222' && $datum  <= '1230' || $datum  >= '0101' && $datum  <= '0119'){
         $sign = "<h3>22 december - 19 januari: Stenbocken</h3><img src='img/capricorn.png'>";      

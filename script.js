@@ -11,9 +11,9 @@
       success:function(result) { 
         if(result == "true"){
           viewHoroscope();
-          console.log("lyckades lägga till nytt");
+          
         }else{
-          console.log("misslyckades lägga till nytt");
+          
         }
       }
     })
@@ -30,10 +30,10 @@
           console.log(update);
           if(update == "true"){
             viewHoroscope();
-            console.log("lyckades uppdatera datum");
+            
           }else{
-            //viewHoroscope();
-            console.log("misslyckades uppdatera datum");         
+            viewHoroscope();
+                    
           }
           
           }
@@ -50,9 +50,9 @@
         success:function(clear) {
           if(clear == "true"){
             viewHoroscope();
-            console.log("lyckades att radera");
+            
           }else{
-            console.log("misslyckades att radera");
+            
         }
         
       }
@@ -65,11 +65,7 @@
         type:"GET",
         success:function(view){
           $("#mySign").html(view);
-          // if(view == "true"){
-          //   alert("lyckades");  
-          // }else{
-          //   alert("misslyckades");
-          // }
+         
         }
       })
     }
