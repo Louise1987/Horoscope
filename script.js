@@ -1,24 +1,23 @@
 
   viewHoroscope();
     
-    function addHoroscope(){
-      $.ajax({
-        url: "addHoroscope.php",
-        type:"POST",
-        data: { 
-          datum: $('#input-id').val()
-        },
-        success:function(result) { 
-          if(result == "true"){
-            viewHoroscope();
-            console.log("lyckades att spara datum");  
-          }else{
-            console.log("misslyckades med att sätta datum");
-          
-          }          
+  function addHoroscope(){
+    $.ajax({
+      url: "addHoroscope.php",
+      type:"POST",
+      data: { 
+        datum: $('#input-id').val()
+      },
+      success:function(result) { 
+        if(result == "true"){
+          viewHoroscope();
+          console.log("lyckades lägga till nytt");
+        }else{
+          console.log("misslyckades lägga till nytt");
         }
-      })
-    }
+      }
+    })
+  }
 
     function updateHoroscope(){
       $.ajax({
