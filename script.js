@@ -11,7 +11,7 @@
         success:function(result) { 
           if(result == "true"){
             viewHoroscope();
-            console.log("lyckades att spara datum");
+            console.log("lyckades att spara datum");  
           }else{
             console.log("misslyckades med att sätta datum");
           
@@ -23,7 +23,7 @@
     function updateHoroscope(){
       $.ajax({
         url: "updateHoroscope.php", 
-        type:"POST",
+        type:"PUT",
         data:{
           datum: $('#input-id').val()
         },

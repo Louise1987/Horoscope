@@ -3,9 +3,10 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "GET"){
 
-    if(isset($_SESSION['datum'])){
+    if(isset($_SESSION['birthNumber'])){
 
-    print_r($_SESSION['datum']);
+    
+    print_r($_SESSION['birthNumber']);
     // echo "ditt datum";
 
     }else{

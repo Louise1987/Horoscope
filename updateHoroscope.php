@@ -1,34 +1,21 @@
+
 <?php 
+
+parse_str(file_get_contents("php://input"), $_PUT);
+// include 'calculateHoroscope.php';
 session_start();
-include 'calculateHoroscope.php';
-
-
-//$datum sätter stjärntecknet
-//kolla om session finns ska den uppdatera annars ska den inte uppdatera.
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-//echo("{$_SESSION['test']}");
-
-    die(var_dump($_SESSION['datum']));
-    //om SESSION är sparad
-    if (isset($_POST["datum"]) Or (!empty($_SESSION['datum']))){
-
-    $_POST['datum'] = $datum;
-    // $datum = $_POST["datum"];
-    // $_SESSION['datum']=$datum;
-        
-        echo "true"; 
-
-    //om SESSION inte är sparad
-    } else if
-         (!isset($_POST["datum"])){ 
-         //|| ($_SESSION["datum"]) != ""){
-
-        echo "false";
-    }    
-    else {
+if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
+    if ($_SESSION['birthNumber'] != "") {
+        $newDate = $_PUT['datum'];
+       $_SESSION['birthNumber']=getSign($newDate);
+       
+       //$_SESSION['datum']=$newDate;
+        echo "true";
+    } else {
+        echo "false";        
+    }
+    
+} else {
     echo "false";
 }
-}
-
 ?>
